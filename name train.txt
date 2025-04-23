@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Results</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url('https://cdn.betterproposals.io/blog/2023/03/guide-to-sales-forecasting.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        h2, h5, p {
+            color: #f8f9fa; /* Light text for readability */
+        }
+
+        table {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: black;
+        }
+
+        img {
+            border-radius: 10px;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            border: none;
+        }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Sales Forecasting App</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="text-center">Model Training Results</h2>
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">Evaluation Metrics</h5>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mean Absolute Error (MAE)</td>
+                            <td>{{ mae }}</td>
+                        </tr>
+                        <tr>
+                            <td>Mean Squared Error (MSE)</td>
+                            <td>{{ mse }}</td>
+                        </tr>
+                        <tr>
+                            <td>Root Mean Squared Error (RMSE)</td>
+                            <td>{{ rmse }}</td>
+                        </tr>
+                        <tr>
+                            <td>R² Score</td>
+                            <td>{{ r2 }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h5 class="card-title mt-4">Visualizations</h5>
+
+                <!-- Sales Trends Over Time -->
+                <div class="mb-4">
+                    <h6>Sales Trends Over Time</h6>
+                    <img src="{{ sales_trends_img }}" alt="Sales Trends" class="img-fluid">
+                </div>
+
+                <!-- Actual vs Predicted Sales -->
+                <div class="mb-4">
+                    <h6>Actual vs Predicted Sales</h6>
+                    <img src="{{ actual_vs_predicted_img }}" alt="Actual vs Predicted Sales" class="img-fluid">
+                </div>
+
+                <!-- Predicted Future Sales -->
+                <div class="mb-4">
+                    <h6>Predicted Future Sales</h6>
+                    <img src="{{ future_sales_img }}" alt="Predicted Future Sales" class="img-fluid">
+                </div>
+
+                <!-- Model Performance Comparison -->
+                <div class="mb-4">
+                    <h6>Model Performance Comparison</h6>
+                    <img src="{{ model_comparison_img }}" alt="Model Performance Comparison" class="img-fluid">
+                </div>
+
+                <a href="/" class="btn btn-secondary w-100">Train Another Model</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 Sales Forecasting App. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

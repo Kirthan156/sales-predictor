@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Training Results</title>
+</head>
+<body>
+    <h1>Model Training Results</h1>
+    <p><strong>Mean Absolute Error (MAE):</strong> {{ result['mae'] }}</p>
+    <p><strong>Mean Squared Error (MSE):</strong> {{ result['mse'] }}</p>
+    <p><strong>Root Mean Squared Error (RMSE):</strong> {{ result['rmse'] }}</p>
+    <p><strong>R2 Score:</strong> {{ result['r2'] }}</p>
+
+    <h2>Actual vs Predicted Sales</h2>
+    <img src="{{ img_path }}" alt="Actual vs Predicted Sales">
+
+</body>
+</html>

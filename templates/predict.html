@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select a Model</title>
+</head>
+<body>
+    <h1>Select a model to train and predict</h1>
+    <form action="/predict" method="POST">
+        <label for="model">Choose a model:</label>
+        <select name="model" id="model" required>
+            <option value="linear_regression">Linear Regression</option>
+            <option value="random_forest">Random Forest</option>
+            <option value="xgboost">XGBoost</option>
+        </select><br><br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
